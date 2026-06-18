@@ -72,14 +72,12 @@
         </div>
     </main>
     <script>
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                var startPoint = document.querySelector('.hanja-column');
-                if (startPoint) {
-                    startPoint.scrollIntoView({ behavior: 'auto', block: 'start', inline: 'end' });
-                }
-            }, 50);
-        });
-    </script>
+    window.onload = function() {
+        var target = document.querySelector('.hanja-column');
+        if (target) {
+            document.body.scrollLeft = target.offsetLeft;
+        }
+    };
+</script>
 </body>
 </html>
